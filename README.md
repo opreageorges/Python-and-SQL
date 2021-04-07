@@ -1,3 +1,3 @@
 # Python-and-SQL
 
-A combination of python flask and SQL
+Using python flask to interact with an Oracle data base.
