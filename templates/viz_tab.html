@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+
+
+<body>
+
+<h2>Vizualizare tabelurilor</h2>
+
+<form action="/Vizualizare_tabeluri">
+  <label for="ntab">Numele tabelului:</label><br>
+  <input type="text" name="ntab" value=""><br>
+  <label for="stab">Sortat in functie de:</label><br>
+  <input type="text" name="stab" value=""><br>
+  <input type="submit" value="Afiseaza tabelul">
+</form> 
+
+{% block content %}
+    {% if condition == 1 %}
+		<table>
+		{% for i in range(1, lungimea, table[0]) %} 
+			<tr>
+			{% for j in range(i , table[0] + i) %} 
+				<th>{{table[j]}}</th> 
+			{%endfor%} 
+			</tr> 
+		{%endfor%}
+		</table>
+	{% endif %}
+	{% if condition == -1%}
+		<h2>Tabel invalid</h2>
+	{% endif %}
+{% endblock content %}
+
+
+</body>
+</html>

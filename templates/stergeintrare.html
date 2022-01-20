@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+<h2>Stergere intrari din tabel</h2>
+
+<form action="/Stergere">
+  <label for="ntab">Numele tabelului:</label><br>
+  <input type="text" name="ntab" value=""><br>
+  <label for="info">Idul liniei de sters</label><br>
+  <input type="number" name="info" value=""><br>
+  <input type="submit" value="Stergere intrarea">
+  {% if condition == 0%}
+		<h2>Datele introduse sunt invalide.</h2>
+  {% endif %}
+  {% if condition == 1%}
+		<h2>Intrarea a fost steasra cu succes.</h2>
+  {% endif %}
+</form> 
+</body>
+
+</html>

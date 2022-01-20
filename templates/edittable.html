@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+<h2>Editare intrari din tabel</h2>
+
+<form action="/Editare">
+  <label for="ntab">Numele tabelului:</label><br>
+  <input type="text" name="ntab" value=""><br>
+  <label for="info">Idul liniei de editat</label><br>
+  <input type="number" name="info" value=""><br>
+  <label for="camp">Campul de editat</label><br>
+  <input type="text" name="camp" value=""><br>
+  <label for="nvalue">Noua valoare</label><br>
+  <input type="text" name="nvalue" value=""><br>
+  <input type="submit" value="Editeaza campul">
+  {% if condition == -1%}
+		<h2>Datele introduse sunt invalide.</h2>
+  {% endif %}
+  {% if condition == 1%}
+		<h2>Intrarea a fost modificata.</h2>
+  {% endif %}
+</form> 
+</body>
+
+</html>
